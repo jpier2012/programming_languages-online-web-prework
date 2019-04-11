@@ -48,7 +48,8 @@ def reformat_languages(languages)
         new_hash[language_namge][:style] = style_array
       else
         new_hash[language_namge][:style] << style
-        new_hash[language_name] = info
+      end
+      new_hash[language_name] = info
       binding.pry
     }
   }
