@@ -44,8 +44,10 @@ def reformat_languages(languages)
   style_array = style
     language.each {|language_name, info|
     # language_name = :ruby, :javascript, :clojure, etc etc
-      new_hash[language_name]
-
+      if new_hash[language_name][:style].nil?
+        new_hash[language_namge][:style] = style_array
+      else
+        new_hash[language_namge][:style] << style
         new_hash[language_name] = info
       binding.pry
     }
